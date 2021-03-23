@@ -11,9 +11,9 @@ use Illuminate\Notifications\Notifiable;
 
 class Mahasiswa extends Model
 {
-    protected $table ="mahasiswa"; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswas
+    protected $table ="mahasiswas"; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswas
     public $timestamps = false;
-    protected $primaryKey = 'nim'; // Memanggil isi DB Dengan primarykey
+    protected $primaryKey = 'Nim'; // Memanggil isi DB Dengan primarykey
     /**
     * The attributes that are mass assignable.
     * 
