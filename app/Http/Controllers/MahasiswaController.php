@@ -15,8 +15,8 @@ class MahasiswaController extends Controller
     public function index()
     {
         //fungsi eloquent menampilkan data menggunakan pagination
-        $mahasiswas = Mahasiswa::all(); // Mengambil semua isi tabel
-        $posts = Mahasiswa::orderBy('Nim', 'desc')->paginate(6);
+        $mahasiswas = Mahasiswa::paginate(5); // Membuat pagination, setiap page, menampilkan 5 data
+        $posts = Mahasiswa::orderBy('Nim', 'desc')->paginate(5);
         return view('mahasiswas.index', compact('mahasiswas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -35,6 +35,8 @@ class MahasiswaController extends Controller
         'Kelas' => 'required',
         'Jurusan' => 'required',
         'No_Handphone' => 'required',
+        'email' => 'required',
+        'tanggal_lahir' => 'required',
         ]);
         
         //fungsi eloquent untuk menambah data
@@ -68,6 +70,8 @@ class MahasiswaController extends Controller
             'Kelas' => 'required',
             'Jurusan' => 'required',
             'No_Handphone' => 'required',
+            'email' => 'required',
+            'tanggal_lahir' => 'required',
         ]);
 
         //fungsi eloquent untuk mengupdate data inputan kita
@@ -78,11 +82,11 @@ class MahasiswaController extends Controller
         ->with('success', 'Mahasiswa Berhasil Diupdate');
     }
    
-    public function destroy( $Nim)
-   {
+    public function destroy($Nim)
+    {
        //fungsi eloquent untuk menghapus data
        Mahasiswa::find($Nim)->delete();
        return redirect()->route('mahasiswas.index')
             -> with('success', 'Mahasiswa Berhasil Dihapus');
-   }
+    }
 }
