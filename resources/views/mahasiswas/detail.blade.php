@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
-        <div class="card" style="width: 24rem;">
+        <div class="card" style="width: 30rem;">
             <div class="card-header">
                 Detail Mahasiswa
             </div>
@@ -14,6 +14,8 @@
                     <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->Kelas}}</li>
                     <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->Jurusan}}</li>
                     <li class="list-group-item"><b>No_Handphone: </b>{{$Mahasiswa->No_Handphone}}</li>
+                    <li class="list-group-item"><b>Email: </b>{{$Mahasiswa->email}}</li>
+                    <li class="list-group-item"><b>Tanggal Lahir: </b>{{$Mahasiswa->tanggal_lahir}}</li>
                 </ul>
             </div>
             <a class="btn btn-success mt3" href="{{ route('mahasiswas.index') }}">Kembali</a>
