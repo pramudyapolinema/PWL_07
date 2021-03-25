@@ -7,9 +7,16 @@
 
 </div>
 
-<div class="row justify-content-end my-2">
-    <div class="col-sm-2">
-        <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a>
+<div class="row justify-content-end">
+    <div class="col-md-4">
+        <form action="{{ route('mahasiswas.index') }}" accept-charset="UTF-8" method="get">
+            <div class="input-group">
+                <input type="text" name="search" id="search" placeholder="Cari" class="form-control">
+                <span class="input-group-btn">
+                    <input type="submit" value="Cari" class="btn btn-primary">
+                </span>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -53,5 +60,10 @@
     </tr>
     @endforeach
 </table>
+<div class="row justify-content-end">
+<div class="col-md-2">
+        <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a>
+    </div>
+</div>
 {{ $mahasiswas -> links('mahasiswas.pagination') }}
 @endsection
