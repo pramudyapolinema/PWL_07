@@ -50,6 +50,16 @@
                         <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone"
                             value="{{ $Mahasiswa->No_Handphone }}" ariadescribedby="No_Handphone">
                     </div>
+                    <div class="form-group">
+                        <label for="No_Handphone">Email</label>
+                        <input type="email" name="email" class="form-control" id="email"
+                            value="{{ $Mahasiswa->email }}" ariadescribedby="email">
+                    </div>
+                    <div class="form-group">
+                        <!-- Date input -->
+                        <label for="tanggal_lahir">Tanggal Lahir</label>
+                        <input class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $Mahasiswa->tanggal_lahir}}" type="text"/>
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
