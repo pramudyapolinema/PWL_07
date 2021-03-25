@@ -42,9 +42,18 @@
                     </div>
                     <div class="form-group">
                         <label for="No_Handphone">No_Handphone</label>
-
                         <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone"
                             aria-describedby="No_Handphone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="email">
+                    </div>
+                    <div class="form-group">
+                        <!-- Date input -->
+                        <label class="control-label" for="tanggal_lahir">Tanggal Lahir</label>
+                        <input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="YYYY-MM-DD" type="text"/>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
